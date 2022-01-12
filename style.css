@@ -1,0 +1,63 @@
+main {
+    font-family: monospace, monospace;
+    max-width: 38rem;
+    padding: 2rem;
+    margin: auto;
+}
+
+@media only screen and (max-device-width: 736px) {
+    main {
+        padding: 0rem;
+    }
+}
+
+.right {
+    text-align:right;
+}
+
+a ,
+a:active,
+a:visited {  
+    font-size: 18px;
+    color: #00ff1f;
+    background-color: black;
+
+}
+ 
+.button {
+    color: #ef1577;
+    background-color: #131718;
+
+    border: none;
+    padding: 7px 5px;
+    text-align: center;
+    font-family: monospace, monospace;
+
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #ef1577;
+   color: #131718;
+  }
+
+h2,
+h3,
+h4,
+h5 {
+    margin-bottom: .1rem;
+}
+
+
+
+.snow {
+    background-image: url('wall.jpg');
+    color: #d7d7d7;
+
+
+}
+
+
