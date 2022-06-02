@@ -7,12 +7,28 @@
     <link rel="icon" href="https://avatars.githubusercontent.com/u/70021050?v=4">
 </head>
 
-<body>
+<body style="margin: 0;">
+    <div id="div" >
+        <canvas width=1366 height=768 id="main"></canvas>
+    </div>
+
     <script>
-        const color = new URLSearchParams(window.location.search).get("id");
-        if (color)
-            document.body.style.backgroundColor = color;
-        else
-            document.write("<h1 style=\"color:white;\">Query eksik. Örnek yol: /renk.html?id=RED</h1>");
+   
+        const color  =document.URL.split("?")[1]
+        const canvas = document.getElementById("main");
+
+        if (!color)
+         document.getElementById("div").innerHTML="<h1 style=\"color:black;\">Örnek yol: /renk.html?RED</h1>";
+        else {
+
+            canvas.width = document.documentElement.clientWidth;
+
+            canvas.height = document.documentElement.clientHeight;
+
+            const ctx = canvas.getContext("2d");
+            ctx.fillStyle = color;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
     </script>
+
 </body>
