@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <title>Renk</title>
+    <meta name="description" content="Yazdığınız renk kodunu görüntüler.">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/70021050?v=4">
+</head>
+
+<body>
+    <script>
+        const color = new URLSearchParams(window.location.search).get("id");
+        if (color)
+            document.body.style.backgroundColor = color;
+        else
+            document.write("<h1 style=\"color:white;\">Query eksik. Örnek yol: /renk.html?id=RED</h1>");
+    </script>
+</body>
